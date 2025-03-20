@@ -1,0 +1,168 @@
+YourSolution/
+│
+├── backend/                              # .NET lahendus
+│   ├── YourProject.sln
+│   │
+│   ├── src/
+│   │   ├── YourProject.Core/             # Põhiloogika/domeeni kiht
+│   │   │   ├── Domain/
+│   │   │   │   ├── Entities/
+│   │   │   │   │   ├── Product.cs
+│   │   │   │   │   ├── Order.cs
+│   │   │   │   │   └── User.cs
+│   │   │   │   └── Interfaces/
+│   │   │   │       ├── IRepository.cs
+│   │   │   │       └── IService.cs
+│   │   │   │
+│   │   │   └── Application/
+│   │   │       ├── Services/
+│   │   │       │   ├── ProductService.cs
+│   │   │       │   ├── OrderService.cs
+│   │   │       │   └── UserService.cs
+│   │   │       └── DTOs/
+│   │   │           ├── ProductDto.cs
+│   │   │           └── OrderDto.cs
+│   │   │
+│   │   ├── YourProject.Infrastructure/   # Infrastruktuuri kiht
+│   │   │   ├── Persistence/
+│   │   │   │   ├── ApplicationDbContext.cs
+│   │   │   │   ├── Repositories/
+│   │   │   │   │   ├── ProductRepository.cs
+│   │   │   │   │   ├── OrderRepository.cs
+│   │   │   │   │   └── UserRepository.cs
+│   │   │   │   └── Migrations/
+│   │   │   ├── Services/
+│   │   │   │   ├── EmailService.cs
+│   │   │   │   └── PaymentService.cs
+│   │   │   └── DependencyInjection.cs
+│   │   │
+│   │   ├── YourProject.API/              # Web API kliendi frontend-ile
+│   │   │   ├── Controllers/
+│   │   │   │   ├── ProductsController.cs
+│   │   │   │   ├── OrdersController.cs
+│   │   │   │   └── AuthController.cs
+│   │   │   ├── Configurations/
+│   │   │   │   ├── JwtConfig.cs
+│   │   │   │   └── CorsConfig.cs
+│   │   │   ├── Middleware/
+│   │   │   │   ├── ErrorHandlingMiddleware.cs
+│   │   │   │   └── RequestLoggingMiddleware.cs
+│   │   │   ├── Program.cs
+│   │   │   └── appsettings.json
+│   │   │
+│   │   └── YourProject.Admin/            # MVC admin-paneel
+│   │       ├── Areas/
+│   │       │   └── Admin/
+│   │       │       ├── Controllers/
+│   │       │       │   ├── DashboardController.cs
+│   │       │       │   ├── ProductsController.cs
+│   │       │       │   ├── OrdersController.cs
+│   │       │       │   └── UsersController.cs
+│   │       │       ├── Models/
+│   │       │       │   ├── ViewModels/
+│   │       │       │   │   ├── ProductViewModel.cs
+│   │       │       │   │   └── OrderViewModel.cs
+│   │       │       │   └── Mappings/
+│   │       │       │       └── MappingProfile.cs
+│   │       │       └── Views/
+│   │       │           ├── Dashboard/
+│   │       │           │   └── Index.cshtml
+│   │       │           ├── Products/
+│   │       │           │   ├── Index.cshtml
+│   │       │           │   ├── Create.cshtml
+│   │       │           │   ├── Edit.cshtml
+│   │       │           │   └── Delete.cshtml
+│   │       │           ├── Orders/
+│   │       │           └── Users/
+│   │       ├── Controllers/
+│   │       │   └── HomeController.cs      # Suunamine admin alale
+│   │       ├── Views/
+│   │       │   ├── Home/
+│   │       │   │   └── Index.cshtml      # Võib suunata admin alale
+│   │       │   └── Shared/
+│   │       │       ├── _Layout.cshtml
+│   │       │       └── _AdminLayout.cshtml
+│   │       ├── wwwroot/
+│   │       │   ├── css/
+│   │       │   ├── js/
+│   │       │   └── lib/                  # Bootstrap, jQuery jms
+│   │       ├── Program.cs
+│   │       └── appsettings.json
+│   │
+│   └── tests/
+│       ├── YourProject.UnitTests/
+│       │   ├── Core/
+│       │   │   └── Services/
+│       │   └── Infrastructure/
+│       │       └── Repositories/
+│       └── YourProject.IntegrationTests/
+│           ├── API/
+│           │   └── Controllers/
+│           └── Admin/
+│               └── Controllers/
+│
+└── frontend/                             # JavaScript frontend rakendus
+    ├── public/
+    │   ├── index.html
+    │   ├── favicon.ico
+    │   └── assets/
+    │       └── images/
+    │
+    ├── src/
+    │   ├── api/
+    │   │   ├── client.js                 # Axios või Fetch API konfigureerimine
+    │   │   ├── endpoints.js             
+    │   │   ├── productApi.js             # Product API päringud
+    │   │   └── orderApi.js               # Order API päringud
+    │   │
+    │   ├── components/
+    │   │   ├── common/
+    │   │   │   ├── Header.js
+    │   │   │   ├── Footer.js
+    │   │   │   ├── Navigation.js
+    │   │   │   └── Button.js
+    │   │   ├── products/
+    │   │   │   ├── ProductList.js
+    │   │   │   ├── ProductCard.js
+    │   │   │   └── ProductDetails.js
+    │   │   ├── cart/
+    │   │   │   ├── ShoppingCart.js
+    │   │   │   └── CartItem.js
+    │   │   └── checkout/
+    │   │       ├── CheckoutForm.js
+    │   │       └── OrderSummary.js
+    │   │
+    │   ├── pages/
+    │   │   ├── HomePage.js
+    │   │   ├── ProductsPage.js
+    │   │   ├── ProductDetailPage.js
+    │   │   ├── CartPage.js
+    │   │   ├── CheckoutPage.js
+    │   │   └── OrderConfirmationPage.js
+    │   │
+    │   ├── context/
+    │   │   ├── CartContext.js
+    │   │   ├── AuthContext.js
+    │   │   └── ThemeContext.js
+    │   │
+    │   ├── hooks/
+    │   │   ├── useCart.js
+    │   │   ├── useAuth.js
+    │   │   └── useApi.js
+    │   │
+    │   ├── utils/
+    │   │   ├── formatters.js            # Hindade, kuupäevade jms formateerimiseks
+    │   │   ├── validation.js            # Sisendi valideerimiseks
+    │   │   └── helpers.js               # Abifunktsioonid
+    │   │
+    │   ├── App.js
+    │   ├── index.js
+    │   └── routes.js                    # React Router konfiguratsioon
+    │
+    ├── package.json
+    ├── .env                             # Keskkonna muutujad (API URL jne)
+    ├── .env.development
+    ├── .env.production
+    ├── jsconfig.json                    # VS Code seadistused
+    ├── .eslintrc.js
+    └── README.md
