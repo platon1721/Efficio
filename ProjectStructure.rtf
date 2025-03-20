@@ -1,0 +1,175 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red36\green255\blue255;\red255\green255\blue11;}
+{\*\expandedcolortbl;;\cssrgb\c4983\c100000\c100000;\cssrgb\c100000\c100000\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww29200\viewh15900\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 YourSolution/\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472 \cf2  backend/                              # .NET lahendus\
+\uc0\u9474    \u9500 \u9472 \u9472  YourProject.sln\
+\uc0\u9474    \u9474 \
+\uc0\u9474    \u9500 \u9472 \u9472  src/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  YourProject.Core/             # P\'f5hiloogika/domeeni kiht\
+\uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Domain/\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Entities/\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Product.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Order.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9474    \u9492 \u9472 \u9472  User.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9492 \u9472 \u9472  Interfaces/\
+\uc0\u9474    \u9474    \u9474    \u9474        \u9500 \u9472 \u9472  IRepository.cs\
+\uc0\u9474    \u9474    \u9474    \u9474        \u9492 \u9472 \u9472  IService.cs\
+\uc0\u9474    \u9474    \u9474    \u9474 \
+\uc0\u9474    \u9474    \u9474    \u9492 \u9472 \u9472  Application/\
+\uc0\u9474    \u9474    \u9474        \u9500 \u9472 \u9472  Services/\
+\uc0\u9474    \u9474    \u9474        \u9474    \u9500 \u9472 \u9472  ProductService.cs\
+\uc0\u9474    \u9474    \u9474        \u9474    \u9500 \u9472 \u9472  OrderService.cs\
+\uc0\u9474    \u9474    \u9474        \u9474    \u9492 \u9472 \u9472  UserService.cs\
+\uc0\u9474    \u9474    \u9474        \u9492 \u9472 \u9472  DTOs/\
+\uc0\u9474    \u9474    \u9474            \u9500 \u9472 \u9472  ProductDto.cs\
+\uc0\u9474    \u9474    \u9474            \u9492 \u9472 \u9472  OrderDto.cs\
+\uc0\u9474    \u9474    \u9474 \
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  YourProject.Infrastructure/   # Infrastruktuuri kiht\
+\uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Persistence/\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  ApplicationDbContext.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Repositories/\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  ProductRepository.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  OrderRepository.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9474    \u9492 \u9472 \u9472  UserRepository.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9492 \u9472 \u9472  Migrations/\
+\uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Services/\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  EmailService.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9492 \u9472 \u9472  PaymentService.cs\
+\uc0\u9474    \u9474    \u9474    \u9492 \u9472 \u9472  DependencyInjection.cs\
+\uc0\u9474    \u9474    \u9474 \
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  YourProject.API/              # Web API kliendi frontend-ile\
+\uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Controllers/\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  ProductsController.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  OrdersController.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9492 \u9472 \u9472  AuthController.cs\
+\uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Configurations/\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  JwtConfig.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9492 \u9472 \u9472  CorsConfig.cs\
+\uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Middleware/\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9500 \u9472 \u9472  ErrorHandlingMiddleware.cs\
+\uc0\u9474    \u9474    \u9474    \u9474    \u9492 \u9472 \u9472  RequestLoggingMiddleware.cs\
+\uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Program.cs\
+\uc0\u9474    \u9474    \u9474    \u9492 \u9472 \u9472  appsettings.json\
+\uc0\u9474    \u9474    \u9474 \
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  YourProject.Admin/            # MVC admin-paneel\
+\uc0\u9474    \u9474        \u9500 \u9472 \u9472  Areas/\
+\uc0\u9474    \u9474        \u9474    \u9492 \u9472 \u9472  Admin/\
+\uc0\u9474    \u9474        \u9474        \u9500 \u9472 \u9472  Controllers/\
+\uc0\u9474    \u9474        \u9474        \u9474    \u9500 \u9472 \u9472  DashboardController.cs\
+\uc0\u9474    \u9474        \u9474        \u9474    \u9500 \u9472 \u9472  ProductsController.cs\
+\uc0\u9474    \u9474        \u9474        \u9474    \u9500 \u9472 \u9472  OrdersController.cs\
+\uc0\u9474    \u9474        \u9474        \u9474    \u9492 \u9472 \u9472  UsersController.cs\
+\uc0\u9474    \u9474        \u9474        \u9500 \u9472 \u9472  Models/\
+\uc0\u9474    \u9474        \u9474        \u9474    \u9500 \u9472 \u9472  ViewModels/\
+\uc0\u9474    \u9474        \u9474        \u9474    \u9474    \u9500 \u9472 \u9472  ProductViewModel.cs\
+\uc0\u9474    \u9474        \u9474        \u9474    \u9474    \u9492 \u9472 \u9472  OrderViewModel.cs\
+\uc0\u9474    \u9474        \u9474        \u9474    \u9492 \u9472 \u9472  Mappings/\
+\uc0\u9474    \u9474        \u9474        \u9474        \u9492 \u9472 \u9472  MappingProfile.cs\
+\uc0\u9474    \u9474        \u9474        \u9492 \u9472 \u9472  Views/\
+\uc0\u9474    \u9474        \u9474            \u9500 \u9472 \u9472  Dashboard/\
+\uc0\u9474    \u9474        \u9474            \u9474    \u9492 \u9472 \u9472  Index.cshtml\
+\uc0\u9474    \u9474        \u9474            \u9500 \u9472 \u9472  Products/\
+\uc0\u9474    \u9474        \u9474            \u9474    \u9500 \u9472 \u9472  Index.cshtml\
+\uc0\u9474    \u9474        \u9474            \u9474    \u9500 \u9472 \u9472  Create.cshtml\
+\uc0\u9474    \u9474        \u9474            \u9474    \u9500 \u9472 \u9472  Edit.cshtml\
+\uc0\u9474    \u9474        \u9474            \u9474    \u9492 \u9472 \u9472  Delete.cshtml\
+\uc0\u9474    \u9474        \u9474            \u9500 \u9472 \u9472  Orders/\
+\uc0\u9474    \u9474        \u9474            \u9492 \u9472 \u9472  Users/\
+\uc0\u9474    \u9474        \u9500 \u9472 \u9472  Controllers/\
+\uc0\u9474    \u9474        \u9474    \u9492 \u9472 \u9472  HomeController.cs      # Suunamine admin alale\
+\uc0\u9474    \u9474        \u9500 \u9472 \u9472  Views/\
+\uc0\u9474    \u9474        \u9474    \u9500 \u9472 \u9472  Home/\
+\uc0\u9474    \u9474        \u9474    \u9474    \u9492 \u9472 \u9472  Index.cshtml      # V\'f5ib suunata admin alale\
+\uc0\u9474    \u9474        \u9474    \u9492 \u9472 \u9472  Shared/\
+\uc0\u9474    \u9474        \u9474        \u9500 \u9472 \u9472  _Layout.cshtml\
+\uc0\u9474    \u9474        \u9474        \u9492 \u9472 \u9472  _AdminLayout.cshtml\
+\uc0\u9474    \u9474        \u9500 \u9472 \u9472  wwwroot/\
+\uc0\u9474    \u9474        \u9474    \u9500 \u9472 \u9472  css/\
+\uc0\u9474    \u9474        \u9474    \u9500 \u9472 \u9472  js/\
+\uc0\u9474    \u9474        \u9474    \u9492 \u9472 \u9472  lib/                  # Bootstrap, jQuery jms\
+\uc0\u9474    \u9474        \u9500 \u9472 \u9472  Program.cs\
+\uc0\u9474    \u9474        \u9492 \u9472 \u9472  appsettings.json\
+\uc0\u9474    \u9474 \
+\uc0\u9474    \u9492 \u9472 \u9472  tests/\
+\uc0\u9474        \u9500 \u9472 \u9472  YourProject.UnitTests/\
+\uc0\u9474        \u9474    \u9500 \u9472 \u9472  Core/\
+\uc0\u9474        \u9474    \u9474    \u9492 \u9472 \u9472  Services/\
+\uc0\u9474        \u9474    \u9492 \u9472 \u9472  Infrastructure/\
+\uc0\u9474        \u9474        \u9492 \u9472 \u9472  Repositories/\
+\uc0\u9474        \u9492 \u9472 \u9472  YourProject.IntegrationTests/\
+\uc0\u9474            \u9500 \u9472 \u9472  API/\
+\uc0\u9474            \u9474    \u9492 \u9472 \u9472  Controllers/\
+\uc0\u9474            \u9492 \u9472 \u9472  Admin/\
+\uc0\u9474                \u9492 \u9472 \u9472  Controllers/\
+\uc0\u9474 \cf0 \
+\uc0\u9492 \cf3 \uc0\u9472 \u9472  frontend/                             # JavaScript frontend rakendus\
+    \uc0\u9500 \u9472 \u9472  public/\
+    \uc0\u9474    \u9500 \u9472 \u9472  index.html\
+    \uc0\u9474    \u9500 \u9472 \u9472  favicon.ico\
+    \uc0\u9474    \u9492 \u9472 \u9472  assets/\
+    \uc0\u9474        \u9492 \u9472 \u9472  images/\
+    \uc0\u9474 \
+    \uc0\u9500 \u9472 \u9472  src/\
+    \uc0\u9474    \u9500 \u9472 \u9472  api/\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  client.js                 # Axios v\'f5i Fetch API konfigureerimine\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  endpoints.js             \
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  productApi.js             # Product API p\'e4ringud\
+    \uc0\u9474    \u9474    \u9492 \u9472 \u9472  orderApi.js               # Order API p\'e4ringud\
+    \uc0\u9474    \u9474 \
+    \uc0\u9474    \u9500 \u9472 \u9472  components/\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  common/\
+    \uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Header.js\
+    \uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Footer.js\
+    \uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Navigation.js\
+    \uc0\u9474    \u9474    \u9474    \u9492 \u9472 \u9472  Button.js\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  products/\
+    \uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  ProductList.js\
+    \uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  ProductCard.js\
+    \uc0\u9474    \u9474    \u9474    \u9492 \u9472 \u9472  ProductDetails.js\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  cart/\
+    \uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  ShoppingCart.js\
+    \uc0\u9474    \u9474    \u9474    \u9492 \u9472 \u9472  CartItem.js\
+    \uc0\u9474    \u9474    \u9492 \u9472 \u9472  checkout/\
+    \uc0\u9474    \u9474        \u9500 \u9472 \u9472  CheckoutForm.js\
+    \uc0\u9474    \u9474        \u9492 \u9472 \u9472  OrderSummary.js\
+    \uc0\u9474    \u9474 \
+    \uc0\u9474    \u9500 \u9472 \u9472  pages/\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  HomePage.js\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  ProductsPage.js\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  ProductDetailPage.js\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  CartPage.js\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  CheckoutPage.js\
+    \uc0\u9474    \u9474    \u9492 \u9472 \u9472  OrderConfirmationPage.js\
+    \uc0\u9474    \u9474 \
+    \uc0\u9474    \u9500 \u9472 \u9472  context/\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  CartContext.js\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  AuthContext.js\
+    \uc0\u9474    \u9474    \u9492 \u9472 \u9472  ThemeContext.js\
+    \uc0\u9474    \u9474 \
+    \uc0\u9474    \u9500 \u9472 \u9472  hooks/\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  useCart.js\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  useAuth.js\
+    \uc0\u9474    \u9474    \u9492 \u9472 \u9472  useApi.js\
+    \uc0\u9474    \u9474 \
+    \uc0\u9474    \u9500 \u9472 \u9472  utils/\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  formatters.js            # Hindade, kuup\'e4evade jms formateerimiseks\
+    \uc0\u9474    \u9474    \u9500 \u9472 \u9472  validation.js            # Sisendi valideerimiseks\
+    \uc0\u9474    \u9474    \u9492 \u9472 \u9472  helpers.js               # Abifunktsioonid\
+    \uc0\u9474    \u9474 \
+    \uc0\u9474    \u9500 \u9472 \u9472  App.js\
+    \uc0\u9474    \u9500 \u9472 \u9472  index.js\
+    \uc0\u9474    \u9492 \u9472 \u9472  routes.js                    # React Router konfiguratsioon\
+    \uc0\u9474 \
+    \uc0\u9500 \u9472 \u9472  package.json\
+    \uc0\u9500 \u9472 \u9472  .env                             # Keskkonna muutujad (API URL jne)\
+    \uc0\u9500 \u9472 \u9472  .env.development\
+    \uc0\u9500 \u9472 \u9472  .env.production\
+    \uc0\u9500 \u9472 \u9472  jsconfig.json                    # VS Code seadistused\
+    \uc0\u9500 \u9472 \u9472  .eslintrc.js\
+    \uc0\u9492 \u9472 \u9472  README.md}
