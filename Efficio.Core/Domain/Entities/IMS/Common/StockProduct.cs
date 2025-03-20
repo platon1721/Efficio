@@ -13,6 +13,7 @@ public class StockProduct : BaseDeletableEntity
     public Guid StockId { get; set; }
     public Stock Stock { get; set; } = default!;
     
+    [Required]
     [Range(0, int.MaxValue)]
     public int Quantity { get; set; }
 }

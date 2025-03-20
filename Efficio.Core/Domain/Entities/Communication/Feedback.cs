@@ -22,7 +22,7 @@ public class Feedback: BaseEntity, ITaggable, IDescribable, ICommentable
     
     // User id
     [Required]
-    public Guid MadeBy { get; set; } = default!;
+    public Guid MadeBy { get; set; }
 
     // Tags
     public ICollection<FeedbackTag> FeedbackTags { get; set; } = new List<FeedbackTag>();

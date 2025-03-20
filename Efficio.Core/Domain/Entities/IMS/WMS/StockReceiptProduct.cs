@@ -14,6 +14,7 @@ public class StockReceiptProduct : BaseEntity
     public Guid ProductId { get; set; } = default!;
     public Product Product { get; set; } = default!;
     
+    [Required]
     [Range(0, int.MaxValue)]
     public int Quantity { get; set; }
 }
