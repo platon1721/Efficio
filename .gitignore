@@ -39,6 +39,16 @@ Desktop.ini
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+
+# Development settings with secrets
+appsettings.Development.json
+
+
+# Development settings
+appsettings.Development.json
+*.Development.json
+
+
 # User-specific files
 *.rsuser
 *.suo
