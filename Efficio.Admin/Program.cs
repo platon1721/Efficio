@@ -1,8 +1,19 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Efficio.Admin.Data;
+using Efficio.Infrastructure.Persistence;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+
+
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+// builder.Services.AddDbContext<AppDbContext>(options =>
+//     options.UseSqlServer(builder.Configuration.GetConnectionString("AppDbContext") ?? throw new InvalidOperationException("Connection string 'AppDbContext' not found.")));
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("AppDbContext") ?? throw new InvalidOperationException("Connection string 'AppDbContext' not found.")));
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
@@ -40,6 +51,11 @@ app.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
+
+app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
 
 app.MapRazorPages()
     .WithStaticAssets();

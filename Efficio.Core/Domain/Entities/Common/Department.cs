@@ -18,9 +18,12 @@ public class Department : BaseDeletableEntity
     
     public Guid? HeadDepartmentId { get; set; }
     public Department? HeadDepartment { get; set; }
+    public ICollection<UserDepartment> UserDepartments { get; set; } = new List<UserDepartment>();
     public ICollection<Department> SubDepartments { get; set; } = new List<Department>();
     public ICollection<PostDepartment> PostDepartments{ get; set; } = new List<PostDepartment>();
     
     [NotMapped]
     public ICollection<Post> Posts => PostDepartments.Select(x => x.Post).ToList();
+    [NotMapped]
+    public ICollection<User> Users => UserDepartments.Select(x => x.User).ToList();
 }

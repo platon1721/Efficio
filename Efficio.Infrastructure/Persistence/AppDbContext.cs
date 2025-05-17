@@ -2,12 +2,10 @@ using System.Linq.Expressions;
 using Efficio.Core.Domain.Entities.Base;
 using Efficio.Core.Domain.Entities.Common;
 using Efficio.Core.Domain.Entities.Communication;
-using Efficio.Core.Domain.Entities.IMS.Common;
-using Efficio.Core.Domain.Entities.IMS.WMS;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace DAL.Data;
+namespace Efficio.Infrastructure.Persistence;
 
 public class AppDbContext : DbContext
 {

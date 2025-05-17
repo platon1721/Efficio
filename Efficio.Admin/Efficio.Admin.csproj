@@ -8,20 +8,106 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true"/>
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.3">
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.3" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.0.0"/>
-        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0"/>
-        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.0"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0"/>
+      <ProjectReference Include="..\Efficio.Core\Efficio.Core.csproj" />
+      <ProjectReference Include="..\Efficio.Infrastructure\Efficio.Infrastructure.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Areas\Admin\Controllers\" />
-      <Folder Include="Areas\Admin\Views\" />
+      <_ContentIncludedByDefault Remove="Views\Department\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Department\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Department\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Department\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Department\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\User\Department\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\User\Department\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\User\Department\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\User\Department\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\User\Department\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Feedback\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Feedback\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Feedback\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Feedback\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Feedback\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Post\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Post\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Post\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Post\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Post\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Product\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Product\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Product\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Product\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Product\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Tag\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Tag\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Tag\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Tag\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Tag\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\SalesRep\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\SalesRep\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\SalesRep\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\SalesRep\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\SalesRep\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Stock\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Stock\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Stock\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Stock\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Stock\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\StockOrder\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\StockOrder\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\StockOrder\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\StockOrder\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\StockOrder\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\StockReceipt\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\StockReceipt\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\StockReceipt\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\StockReceipt\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\StockReceipt\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\WriteOff\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\WriteOff\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\WriteOff\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\WriteOff\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\WriteOff\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\User\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\User\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\User\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\User\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\User\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Admin\Views\User\Create.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\User\Delete.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\User\Details.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\User\Edit.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\User\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\Admin\Data\" />
     </ItemGroup>
 
 </Project>

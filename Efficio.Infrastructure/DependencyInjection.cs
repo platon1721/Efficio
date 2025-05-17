@@ -1,8 +1,8 @@
-using DAL.Data;
+using Efficio.Core.Domain.Interfaces;
+using Efficio.Infrastructure.Persistence;
 using Microsoft.Extensions.Configuration;
-
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
 namespace Efficio.Infrastructure;
 
@@ -14,6 +14,9 @@ public static class DependencyInjection
         services.AddDbContext<AppDbContext>(options => options.UseNpgsql(
             configuration.GetConnectionString("DefaultConnection"),
             b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
+
+        // Register repositories
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
         
         return services;
     }
