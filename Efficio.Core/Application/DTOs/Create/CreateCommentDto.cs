@@ -1,8 +1,7 @@
-// Efficio.Core/Application/DTOs/Input/CreateCommentDto.cs
 using System.ComponentModel.DataAnnotations;
 using Efficio.Core.Domain.Entities.Enums;
 
-namespace Efficio.Core.Application.DTOs.Input;
+namespace Efficio.Core.Application.DTOs.Create;
 
 public class CreateCommentDto
 {

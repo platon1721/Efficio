@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Efficio.Core.Application.DTOs.Input;
+namespace Efficio.Core.Application.DTOs.Update;
 
 public class UpdateUserDto
 {
