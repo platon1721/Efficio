@@ -18,6 +18,8 @@ public static class DependencyInjection
         // Register repositories
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         
+        services.AddAutoMapper(typeof(DependencyInjection).Assembly);      
+        
         return services;
     }
 }

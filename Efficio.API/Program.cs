@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Efficio.API.Configurations;
 using Efficio.API.Middleware;
+using Efficio.Core.Application;
 using Efficio.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -38,6 +39,10 @@ builder.Services.AddCors(options =>
 
 // Configure JWT Authentication
 builder.Services.AddJwtConfiguration(builder.Configuration);
+
+// Add Application layer services
+builder.Services.AddApplication();
+
 
 var app = builder.Build();
 
