@@ -17,6 +17,8 @@ public class AppDbContext : DbContext
         public DbSet<Department> Departments { get; set; }
         public DbSet<UserDepartment>  UserDepartments { get; set; }
         
+        public DbSet<AuthUser> AuthUsers { get; set; }
+        
         #endregion
         
     
@@ -70,6 +72,10 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+        
+        // User authentication
+        modelBuilder.Entity<AuthUser>()
+            .HasBaseType<User>();
         
         // User and Department relations
         modelBuilder.Entity<UserDepartment>()

@@ -13,6 +13,7 @@ public static class DependencyInjection
         services.AddAutoMapper(typeof(MappingProfile).Assembly);
         
         // Register application services
+        services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IDepartmentService, DepartmentService>();
         services.AddScoped<IFeedbackService, FeedbackService>();
