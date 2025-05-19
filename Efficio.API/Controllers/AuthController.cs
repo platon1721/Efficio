@@ -1,13 +1,13 @@
-// Efficio.API/Controllers/AuthController.cs
 using Efficio.Core.Application.DTOs.Auth;
 using Efficio.Core.Application.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using Asp.Versioning;
 
 namespace Efficio.API.Controllers;
 
-[ApiVersion("1.0")]
+[ApiVersion(1.0)]
 public class AuthController : BaseApiController
 {
     private readonly IAuthService _authService;

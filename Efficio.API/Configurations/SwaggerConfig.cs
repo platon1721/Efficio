@@ -1,4 +1,4 @@
-using Microsoft.Extensions.DependencyInjection;
+using Asp.Versioning.ApiExplorer;
 using Microsoft.OpenApi.Models;
 
 namespace Efficio.API.Configurations
@@ -9,7 +9,22 @@ namespace Efficio.API.Configurations
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Efficio API", Version = "v1" });
+                // Hangi versioonid
+                var provider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
+        
+                // Lisa dokument iga versiooni jaoks
+                foreach (var description in provider.ApiVersionDescriptions)
+                {
+                    c.SwaggerDoc(
+                        description.GroupName,
+                        new OpenApiInfo
+                        {
+                            Title = "Efficio API",
+                            Version = description.ApiVersion.ToString()
+                        });
+                }
+                
+                // c.SwaggerDoc("v1", new OpenApiInfo { Title = "Efficio API", Version = "v1" });
                 
                 // Configure Swagger to use JWT Authentication
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

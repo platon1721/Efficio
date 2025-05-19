@@ -1,4 +1,3 @@
-// Efficio.API/Controllers/TagsController.cs
 using Efficio.Core.Application.DTOs;
 using Efficio.Core.Application.DTOs.Create;
 using Efficio.Core.Application.DTOs.Update;
@@ -6,10 +5,11 @@ using Efficio.Core.Application.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using Asp.Versioning;
 
 namespace Efficio.API.Controllers;
 
-[ApiVersion("1.0")]
+[ApiVersion(1.0)]
 [Authorize]
 public class TagsController : BaseApiController
 {
