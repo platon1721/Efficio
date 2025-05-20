@@ -173,12 +173,21 @@ public class AppDbContext : DbContext
                 
                 
                 // Add global query filter for soft delete
-                var parameter = Expression.Parameter(entityType.ClrType, "e");
-                var property = Expression.Property(parameter, "IsDeleted");
-                var condition = Expression.Equal(property, Expression.Constant(false));
-                var lambda = Expression.Lambda(condition, parameter);
+                // var parameter = Expression.Parameter(entityType.ClrType, "e");
+                // var property = Expression.Property(parameter, "IsDeleted");
+                // var condition = Expression.Equal(property, Expression.Constant(false));
+                // var lambda = Expression.Lambda(condition, parameter);
+                //
+                // modelBuilder.Entity(entityType.ClrType).HasQueryFilter(lambda);
+                if (entityType.BaseType == null || !typeof(BaseDeletableEntity).IsAssignableFrom(entityType.BaseType.ClrType))
+                {
+                    var parameter = Expression.Parameter(entityType.ClrType, "e");
+                    var property = Expression.Property(parameter, "IsDeleted");
+                    var condition = Expression.Equal(property, Expression.Constant(false));
+                    var lambda = Expression.Lambda(condition, parameter);
             
-                modelBuilder.Entity(entityType.ClrType).HasQueryFilter(lambda);
+                    modelBuilder.Entity(entityType.ClrType).HasQueryFilter(lambda);
+                }
             }
         }
     }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="AdminDashboard" xml:space="preserve">
+    <value>Administreerimise juhtpaneel</value>
+  </data>
+    <data name="UserManagement" xml:space="preserve">
+    <value>Kasutajate haldamine</value>
+  </data>
+    <data name="ManageUsersAndDepartments" xml:space="preserve">
+    <value>Halda kasutajaid ja osakondi</value>
+  </data>
+    <data name="ManageUsers" xml:space="preserve">
+    <value>Halda kasutajaid</value>
+  </data>
+    <data name="ManageDepartments" xml:space="preserve">
+    <value>Halda osakondi</value>
+  </data>
+    <data name="Content" xml:space="preserve">
+    <value>Sisu</value>
+  </data>
+    <data name="ManagePostsAndFeedback" xml:space="preserve">
+    <value>Halda postitusi ja tagasisidet</value>
+  </data>
+    <data name="ManagePosts" xml:space="preserve">
+    <value>Halda postitusi</value>
+  </data>
+    <data name="ManageFeedback" xml:space="preserve">
+    <value>Halda tagasisidet</value>
+  </data>
+    <data name="Metadata" xml:space="preserve">
+    <value>Metaandmed</value>
+  </data>
+    <data name="ManageTagsAndComments" xml:space="preserve">
+    <value>Halda silte ja kommentaare</value>
+  </data>
+    <data name="ManageTags" xml:space="preserve">
+    <value>Halda silte</value>
+  </data>
+    <data name="ManageComments" xml:space="preserve">
+    <value>Halda kommentaare</value>
+  </data>
+</root>

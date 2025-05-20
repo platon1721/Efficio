@@ -1,0 +1,47 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = Localizer["AdminDashboard"];
+}
+
+<h1>@Localizer["AdminDashboard"]</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                @Localizer["UserManagement"]
+            </div>
+            <div class="card-body">
+                <p>@Localizer["ManageUsersAndDepartments"]</p>
+                <a asp-controller="User" asp-action="Index" class="btn btn-primary">@Localizer["ManageUsers"]</a>
+                <a asp-controller="Department" asp-action="Index" class="btn btn-outline-primary">@Localizer["ManageDepartments"]</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                @Localizer["Content"]
+            </div>
+            <div class="card-body">
+                <p>@Localizer["ManagePostsAndFeedback"]</p>
+                <a asp-controller="Post" asp-action="Index" class="btn btn-primary">@Localizer["ManagePosts"]</a>
+                <a asp-controller="Feedback" asp-action="Index" class="btn btn-outline-primary">@Localizer["ManageFeedback"]</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                @Localizer["Metadata"]
+            </div>
+            <div class="card-body">
+                <p>@Localizer["ManageTagsAndComments"]</p>
+                <a asp-controller="Tag" asp-action="Index" class="btn btn-primary">@Localizer["ManageTags"]</a>
+                <a asp-controller="Comment" asp-action="Index" class="btn btn-outline-primary">@Localizer["ManageComments"]</a>
+            </div>
+        </div>
+    </div>
+</div>

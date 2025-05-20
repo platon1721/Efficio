@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="FirstName" xml:space="preserve">
+    <value>Eesnimi</value>
+  </data>
+    <data name="FirstNameRequired" xml:space="preserve">
+    <value>Eesnimi on kohustuslik</value>
+  </data>
+    <data name="FirstNameMaxLength" xml:space="preserve">
+    <value>Eesnimi ei tohi ületada 50 tähemärki</value>
+  </data>
+    <data name="SurName" xml:space="preserve">
+    <value>Perekonnanimi</value>
+  </data>
+    <data name="SurNameRequired" xml:space="preserve">
+    <value>Perekonnanimi on kohustuslik</value>
+  </data>
+    <data name="SurNameMaxLength" xml:space="preserve">
+    <value>Perekonnanimi ei tohi ületada 50 tähemärki</value>
+  </data>
+    <data name="Email" xml:space="preserve">
+    <value>E-post</value>
+  </data>
+    <data name="EmailRequired" xml:space="preserve">
+    <value>E-post on kohustuslik</value>
+  </data>
+    <data name="EmailInvalid" xml:space="preserve">
+    <value>Vigane e-posti formaat</value>
+  </data>
+    <data name="EmailMaxLength" xml:space="preserve">
+    <value>E-post ei tohi ületada 120 tähemärki</value>
+  </data>
+    <data name="CountryCode" xml:space="preserve">
+    <value>Riigikood</value>
+  </data>
+    <data name="CountryCodeRequired" xml:space="preserve">
+    <value>Riigikood on kohustuslik</value>
+  </data>
+    <data name="CountryCodeMaxLength" xml:space="preserve">
+    <value>Riigikood ei tohi ületada 5 tähemärki</value>
+  </data>
+    <data name="Number" xml:space="preserve">
+    <value>Telefoninumber</value>
+  </data>
+    <data name="NumberRequired" xml:space="preserve">
+    <value>Telefoninumber on kohustuslik</value>
+  </data>
+    <data name="NumberMaxLength" xml:space="preserve">
+    <value>Telefoninumber ei tohi ületada 15 tähemärki</value>
+  </data>
+    <data name="Departments" xml:space="preserve">
+    <value>Osakonnad</value>
+  </data>
+    <data name="DepartmentIdsRequired" xml:space="preserve">
+    <value>Vähemalt üks osakond peab olema valitud</value>
+  </data>
+</root>

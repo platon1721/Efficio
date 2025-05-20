@@ -4,27 +4,33 @@ namespace Efficio.Core.Application.DTOs.Create;
 
 public class CreateUserDto
 {
-    [Required]
-    [MaxLength(50)]
+    [Required(ErrorMessage = "FirstNameRequired")]
+    [MaxLength(50, ErrorMessage = "FirstNameMaxLength")]
+    [Display(Name = "FirstName")]
     public string FirstName { get; set; } = string.Empty;
     
-    [Required]
-    [MaxLength(50)]
+    [Required(ErrorMessage = "LastNameRequired")]
+    [MaxLength(50, ErrorMessage = "LastNameMaxLength")]
+    [Display(Name = "LastName")]
     public string SurName { get; set; } = string.Empty;
     
-    [Required]
-    [EmailAddress]
-    [MaxLength(120)]
+    [Required(ErrorMessage = "EmailRequired")]
+    [EmailAddress(ErrorMessage = "EmailInvalid")]
+    [MaxLength(120, ErrorMessage = "EmailMaxLength")]
+    [Display(Name = "Email")]
     public string Email { get; set; } = string.Empty;
     
-    [Required]
-    [MaxLength(5)]
+    [Required(ErrorMessage = "CountryCodeRequired")]
+    [MaxLength(5, ErrorMessage = "CountryCodeMaxLength")]
+    [Display(Name = "CountryCode")]
     public string CountryCode { get; set; } = string.Empty;
     
-    [Required]
-    [MaxLength(15)]
+    [Required(ErrorMessage = "NumberRequired")]
+    [MaxLength(15, ErrorMessage = "NumberMaxLength")]
+    [Display(Name = "Number")]
     public string Number { get; set; } = string.Empty;
     
-    [Required]
+    [Required(ErrorMessage = "DepartmentIdsRequired")]
+    [Display(Name = "Departments")]
     public ICollection<Guid> DepartmentIds { get; set; } = new List<Guid>();
 }
