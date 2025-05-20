@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="UserManagement" xml:space="preserve">
+    <value>Kasutajate haldamine</value>
+  </data>
+    <data name="CreateNewUser" xml:space="preserve">
+    <value>Lisa uus kasutaja</value>
+  </data>
+    <data name="CreateUser" xml:space="preserve">
+    <value>Lisa kasutaja</value>
+  </data>
+    <data name="EditUser" xml:space="preserve">
+    <value>Muuda kasutajat</value>
+  </data>
+    <data name="UserDetails" xml:space="preserve">
+    <value>Kasutaja andmed</value>
+  </data>
+    <data name="DeleteUser" xml:space="preserve">
+    <value>Kustuta kasutaja</value>
+  </data>
+    <data name="UserInformation" xml:space="preserve">
+    <value>Kasutaja info</value>
+  </data>
+    <data name="FullName" xml:space="preserve">
+    <value>Täisnimi</value>
+  </data>
+    <data name="FirstName" xml:space="preserve">
+    <value>Eesnimi</value>
+  </data>
+    <data name="SurName" xml:space="preserve">
+    <value>Perekonnanimi</value>
+  </data>
+    <data name="Email" xml:space="preserve">
+    <value>E-post</value>
+  </data>
+    <data name="PhoneNumber" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+    <data name="CountryCode" xml:space="preserve">
+    <value>Riigikood</value>
+  </data>
+    <data name="Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+    <data name="CreatedAt" xml:space="preserve">
+    <value>Loodud</value>
+  </data>
+    <data name="LastModified" xml:space="preserve">
+    <value>Viimati muudetud</value>
+  </data>
+    <data name="DeletedAt" xml:space="preserve">
+    <value>Kustutatud</value>
+  </data>
+    <data name="Actions" xml:space="preserve">
+    <value>Tegevused</value>
+  </data>
+    <data name="Edit" xml:space="preserve">
+    <value>Muuda</value>
+  </data>
+    <data name="Details" xml:space="preserve">
+    <value>Andmed</value>
+  </data>
+    <data name="Delete" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+    <data name="Create" xml:space="preserve">
+    <value>Lisa</value>
+  </data>
+    <data name="Save" xml:space="preserve">
+    <value>Salvesta</value>
+  </data>
+    <data name="BackToList" xml:space="preserve">
+    <value>Tagasi nimekirja</value>
+  </data>
+    <data name="DeleteWarning" xml:space="preserve">
+    <value>Hoiatus</value>
+  </data>
+    <data name="DeleteUserConfirmation" xml:space="preserve">
+    <value>Kas olete kindel, et soovite selle kasutaja kustutada?</value>
+  </data>
+    <data name="UserToDelete" xml:space="preserve">
+    <value>Kustutatav kasutaja</value>
+  </data>
+    <data name="Cancel" xml:space="preserve">
+    <value>Tühista</value>
+  </data>
+    <data name="ConfirmDelete" xml:space="preserve">
+    <value>Kinnita kustutamine</value>
+  </data>
+    <data name="UserCreatedSuccessfully" xml:space="preserve">
+    <value>Kasutaja on edukalt loodud</value>
+  </data>
+    <data name="UserUpdatedSuccessfully" xml:space="preserve">
+    <value>Kasutaja andmed on edukalt uuendatud</value>
+  </data>
+    <data name="UserDeletedSuccessfully" xml:space="preserve">
+    <value>Kasutaja on edukalt kustutatud</value>
+  </data>
+</root>

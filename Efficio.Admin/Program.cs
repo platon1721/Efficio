@@ -2,9 +2,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Efficio.Admin.Data;
 using Efficio.Infrastructure.Persistence;
-using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
+using Efficio.Core.Domain.Interfaces;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,8 +12,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add localization services
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
+// Register AppDbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("AppDbContext") ?? throw new InvalidOperationException("Connection string 'AppDbContext' not found.")));
+
+// Register Unit of Work and Repositories
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??

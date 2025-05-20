@@ -1,89 +1,146 @@
+@* @model IEnumerable<Efficio.Core.Domain.Entities.Common.User> *@
+@* *@
+@* @{ *@
+@*     ViewData["Title"] = "Index"; *@
+@* } *@
+@* *@
+@* <h1>Index</h1> *@
+@* *@
+@* <p> *@
+@*     <a asp-action="Create">Create New</a> *@
+@* </p> *@
+@* <table class="table"> *@
+@*     <thead> *@
+@*         <tr> *@
+@*             <th> *@
+@*                 @Html.DisplayNameFor(model => model.FirstName) *@
+@*             </th> *@
+@*             <th> *@
+@*                 @Html.DisplayNameFor(model => model.SurName) *@
+@*             </th> *@
+@*             <th> *@
+@*                 @Html.DisplayNameFor(model => model.Email) *@
+@*             </th> *@
+@*             <th> *@
+@*                 @Html.DisplayNameFor(model => model.CountryCode) *@
+@*             </th> *@
+@*             <th> *@
+@*                 @Html.DisplayNameFor(model => model.Number) *@
+@*             </th> *@
+@*             <th> *@
+@*                 @Html.DisplayNameFor(model => model.IsDeleted) *@
+@*             </th> *@
+@*             <th> *@
+@*                 @Html.DisplayNameFor(model => model.DeletedBy) *@
+@*             </th> *@
+@*             <th> *@
+@*                 @Html.DisplayNameFor(model => model.DeletedAt) *@
+@*             </th> *@
+@*             <th> *@
+@*                 @Html.DisplayNameFor(model => model.CreatedAt) *@
+@*             </th> *@
+@*             <th> *@
+@*                 @Html.DisplayNameFor(model => model.ModifiedAt) *@
+@*             </th> *@
+@*             <th></th> *@
+@*         </tr> *@
+@*     </thead> *@
+@*     <tbody> *@
+@* @foreach (var item in Model) { *@
+@*         <tr> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.FirstName) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.SurName) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.Email) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.CountryCode) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.Number) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.IsDeleted) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.DeletedBy) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.DeletedAt) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.CreatedAt) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.ModifiedAt) *@
+@*             </td> *@
+@*             <td> *@
+@*                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> | *@
+@*                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> | *@
+@*                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
+@*             </td> *@
+@*         </tr> *@
+@* } *@
+@*     </tbody> *@
+@* </table> *@
+
 @model IEnumerable<Efficio.Core.Domain.Entities.Common.User>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = Localizer["UserManagement"];
 }
 
-<h1>Index</h1>
+<h1>@Localizer["UserManagement"]</h1>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">@Localizer["CreateNewUser"]</a>
 </p>
-<table class="table">
-    <thead>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SurName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CountryCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Number)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsDeleted)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeletedBy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeletedAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ModifiedAt)
-            </th>
-            <th></th>
+            <th>@Localizer["FullName"]</th>
+            <th>@Localizer["Email"]</th>
+            <th>@Localizer["PhoneNumber"]</th>
+            <th>@Localizer["CreatedAt"]</th>
+            <th>@Localizer["Actions"]</th>
         </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SurName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CountryCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Number)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsDeleted)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeletedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeletedAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ModifiedAt)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @(item.FirstName + " " + item.SurName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @($"+{item.CountryCode} {item.Number}")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    <div class="btn-group">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">@Localizer["Edit"]</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info">@Localizer["Details"]</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">@Localizer["Delete"]</a>
+                    </div>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

@@ -7,6 +7,6 @@ namespace Efficio.Admin.Areas.Admin.Controllers
     [Authorize]
     public abstract class AdminBaseController : Controller
     {
-        // Siia saad lisada ühiseid meetodeid, mida kõik admin kontrollerid kasutavad
+        
     }
 }
