@@ -4,7 +4,7 @@ using Microsoft.Extensions.Localization;
 namespace Efficio.Admin.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class HomeController : Controller
+    public class HomeController : AdminBaseController
     {
         private readonly IStringLocalizer<HomeController> _localizer;
 

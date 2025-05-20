@@ -3,6 +3,7 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to Efficio</h1>
+    <p>Please <a asp-area="Identity" asp-page="/Account/Login">log in</a> to access the admin area.</p>
+    <p>Or go directly to <a asp-area="Admin" asp-controller="Home" asp-action="Index">Admin Dashboard</a> if you're already authorized.</p>
 </div>

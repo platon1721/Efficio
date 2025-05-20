@@ -7,7 +7,7 @@ using Efficio.Infrastructure.Persistence;
 namespace Efficio.Admin.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class DepartmentController : Controller
+    public class DepartmentController :  AdminBaseController
     {
         private readonly AppDbContext _context;
 

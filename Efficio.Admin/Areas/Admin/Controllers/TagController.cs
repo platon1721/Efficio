@@ -7,7 +7,7 @@ namespace Efficio.Admin.Areas.Admin.Controllers
 {
     
     [Area("Admin")]
-    public class TagController : Controller
+    public class TagController : AdminBaseController
     {
         private readonly AppDbContext _context;
 
